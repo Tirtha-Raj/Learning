@@ -1,4 +1,4 @@
-package study.LLD.udemy.oops.solid.DependencyInversionPrinciple;
+package study.LLD.udemy.oops.solid.DependencyInversionPrinciple.copy;
 
 public class EmailService implements NotificationService{
 
