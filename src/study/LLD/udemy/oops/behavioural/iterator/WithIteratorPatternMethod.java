@@ -14,22 +14,22 @@ public class WithIteratorPatternMethod {
 
 		Iterator<BookV2> itaratorv2 = bookCollectionv2.createBookIterator();
 		while (itaratorv2.hasNext()) {
-			System.out.println("Books name custom iterator: "+itaratorv2.next());
+			System.out.println("Books name custom iterator: " + itaratorv2.next());
 		}
-		
+
 		BookCollectionV3 bookCollectionv3 = new BookCollectionV3();
 		bookCollectionv3.addBooks(new BookV2("Java"));
 		bookCollectionv3.addBooks(new BookV2("C"));
 		bookCollectionv3.addBooks(new BookV2("Python"));
 		java.util.Iterator<BookV2> itaratorv3 = bookCollectionv3.iterator();
 		while (itaratorv3.hasNext()) {
-			System.out.println("Books name java iterator: "+itaratorv3.next());
+			System.out.println("Books name java iterator: " + itaratorv3.next());
 		}
 	}
 }
 
 //Using Java Iterator
-class BookCollectionV3 implements Iterable<BookV2>{
+class BookCollectionV3 implements Iterable<BookV2> {
 //	private List<BookV2> books = new ArrayList<>();
 //
 //	public void addBooks(BookV2 book) {
@@ -39,7 +39,7 @@ class BookCollectionV3 implements Iterable<BookV2>{
 //	public List<BookV2> getBooks() {
 //		return books;
 //	}
-	
+
 	private Set<BookV2> books = new TreeSet<>();
 
 	public void addBooks(BookV2 book) {
@@ -53,13 +53,14 @@ class BookCollectionV3 implements Iterable<BookV2>{
 	@Override
 	public java.util.Iterator<BookV2> iterator() {
 		return books.iterator();
-	}	
-	
+	}
+
 }
 
 //Using custom iterator
 interface Iterator<T> {
 	boolean hasNext();
+
 	T next();
 }
 
@@ -122,7 +123,7 @@ class BookCollectionV2 {
 
 }
 
-class BookV2 implements Comparable<BookV2>{
+class BookV2 implements Comparable<BookV2> {
 	private String book;
 
 	public String getBook() {
