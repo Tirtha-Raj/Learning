@@ -12,7 +12,7 @@ public class WithIteratorPatternMethod {
 		bookCollectionv2.addBooks(new BookV2("C"));
 		bookCollectionv2.addBooks(new BookV2("Python"));
 
-		Iterator<BookV2> itaratorv2 = bookCollectionv2.createBookIterator();
+		java.util.Iterator<BookV2> itaratorv2 = bookCollectionv2.createBookIterator();
 		while (itaratorv2.hasNext()) {
 			System.out.println("Books name custom iterator: " + itaratorv2.next());
 		}
@@ -96,27 +96,27 @@ class BookCollectionV2 {
 	}
 
 	// using custom iterator
-	private class BookIterator implements Iterator<BookV2> {
+	private class BookIterator implements java.util.Iterator<BookV2> {
 
 //		private List<BookV2> books;
-		private Set<BookV2> books;
-		private int position = 0;
+//		private Set<BookV2> books;
+		private java.util.Iterator<BookV2> iterator;
 
 //		public BookIterator(List<BookV2> books) {
 //			this.books = books;
 //		}
 		public BookIterator(Set<BookV2> books) {
-			this.books = books;
+			this.iterator = books.iterator();
 		}
 
 		@Override
 		public boolean hasNext() {
-			return position < books.size();
+			return iterator.hasNext();
 		}
 
 		@Override
 		public BookV2 next() {
-			return books.
+			return iterator.next();
 		}
 
 	}
