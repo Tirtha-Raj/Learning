@@ -19,7 +19,7 @@ class HouseV2 {
 	private boolean hasGym;
 	private boolean hasGarage;
 
-	public HouseV2(HouseBuilder builder) {
+	private HouseV2(HouseBuilder builder) {
 		this.material = builder.material;
 		this.floorCount = builder.floorCount;
 		this.areaInSqft = builder.areaInSqft;
