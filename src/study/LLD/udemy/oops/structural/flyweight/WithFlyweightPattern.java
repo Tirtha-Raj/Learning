@@ -49,7 +49,7 @@ class BulletTypeFactory {
 
 class BulletV2 {
 
-	private BulletType bulletType; // Intrinsic property : Same across all object //Bullet Images
+	private BulletType bulletType; // Intrinsic property : Same across all object //Bullet Images//shared object
 	private int x; // Extrinsic property : unique for each object
 	private int y;
 
