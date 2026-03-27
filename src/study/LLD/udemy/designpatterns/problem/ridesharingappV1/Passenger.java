@@ -1,11 +1,11 @@
-package study.LLD.udemy.designpatterns.problem.ridesharingapp;
+package study.LLD.udemy.designpatterns.problem.ridesharingappV1;
 
 public class Passenger {
 
 	private String passengerName;
-	private int passengerLocation;
+	private Location passengerLocation;
 
-	public Passenger(String name, int location) {
+	public Passenger(String name, Location location) {
 		this.passengerName = name;
 		this.passengerLocation = location;
 	}
@@ -14,8 +14,7 @@ public class Passenger {
 		return this.passengerName;
 	}
 
-	public int getPassengerLocation() {
+	public Location getPassengerLocation() {
 		return this.passengerLocation;
 	}
 }
-
